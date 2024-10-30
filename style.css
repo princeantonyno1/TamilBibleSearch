@@ -1,0 +1,262 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Freeman&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+*{
+    user-select: none;
+}
+body{
+    height: auto;
+    width: auto;
+    background-image: url(bible.png);
+    background-size:cover;
+    background-position: center;
+    
+}
+header {
+    margin: 2rem 0 0.7rem 0;
+    color: white;
+    font-size: 3.5rem;
+    font-family: "Anta", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+header h3{
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: rgb(201, 201, 201);
+}
+/* Sub-Heading */
+.position-relative{
+    padding: 0.1rem;
+    margin: 1rem;
+    height: auto;
+    width: auto; 
+    border-radius: 10px;
+}
+.book-option{
+    visibility: hidden;
+}
+.booknsearch{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.search{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.start_book p, .end_book p{
+    margin: 0;
+    text-align: left;
+    color: rgb(44, 7, 7);
+    font-size: 1.5rem;
+    padding: 5.5px 25px;
+    width: fit-content;
+    height: auto;
+    background-color: #FFB300;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    border-radius: 7px 10px 0 0;
+}
+
+.start_book select, .end_book select {
+    font-size: 1.4rem;
+    padding: 10px 6px;
+    width: auto;
+    height: auto;
+    background-color: rgba(221, 221, 221, 0.582);
+    border-radius: 0px 7px 9px 5px;
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.452);
+    outline: none;
+}
+
+.search_option{
+    height: fit-content;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+}
+.search_option h6{
+    font-size: 1.3rem;
+    text-align: center;
+    font-family: "Roboto Mono", monospace;
+    letter-spacing:0.001px;
+    margin: 0;
+    padding-left: 5px;
+    align-content: center;
+    border-radius: 10px 0px 0px 10px;
+    align-items: center;
+    background-color: #FFB300;
+}
+
+.search input#get{
+    margin: 1.2rem 0;
+    font-size: 2rem;
+    color: #ffd000;
+    padding: 1rem;
+    width: 100%;
+    background-color:rgba(41, 41, 41, 0.664);
+    border: 1px solid rgba(158, 127, 47, 1);
+    border-radius: 8px;
+    outline: none;
+
+    /* Create the multi-layered gradient border effect */
+    box-shadow: 
+        0 0 0 1px rgba(158, 127, 47, 0.75),       /* Closest dark layer */
+        0 0 0 2px rgba(158, 127, 47, 0.6),        /* Slightly lighter layer */
+        0 0 0 3px rgba(158, 127, 47, 0.45),        /* Medium tone */
+        0 0 0 4px rgba(157, 126, 47, 0.30);    /* Lighter tone */
+       
+    transition: transform 0.3s ease;
+
+}
+.search input::placeholder{
+    font-size: 1.6rem;
+    color: rgba(254, 255, 213, 0.774);
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+.search input:hover {
+    transform: scale(1.02);
+}
+.search button
+{
+    margin: 2rem 0;
+    font-family: "Anta", sans-serif;
+    font-weight: 800;    
+    font-size: 1.8rem;
+    width: max-content;
+    padding: 0.5rem 1rem;
+    transition: transform 0.3s ease;
+}
+.search button:hover{
+    transform: scale(1.025);
+}
+
+/* Custom bootstrap radio button */
+.btn-group .custom-btn {
+    font-family: "Freeman", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    background-color: #ffe3a144;
+    border-color: rgb(150, 115, 0);
+    color: black;
+}
+
+/* Change color for active (checked) button label */
+.btn-group .btn-check:checked + .custom-btn {
+    background-color: #ff8800;
+    color: black;
+    border-color: rgb(179, 137, 1);
+}
+
+/* Remove blue border, text, and box-shadow on focus, checked, and hover */
+.btn-group .custom-btn:focus,
+.btn-group .custom-btn:hover,
+.btn-group .btn-check:checked + .custom-btn:focus {
+    border-color: rgba(110, 75, 0, 0.767);
+    box-shadow: none !important;
+    outline: none !important;
+    color: black !important; /* Fix text color to black on hover */
+}
+.btn-group .custom-btn:hover{
+    background-color: #ffc628b7; 
+}
+@media (min-width: 1025px) {
+    /* Desktop-specific styles */
+    .booknsearch{
+        margin-top: 2rem;
+    }
+}
+
+/* Optimizing the web for Tablet */
+@media (min-width: 600px)and (max-width: 1024px){
+    .booknsearch{
+        flex-direction: column;
+        align-items: center;
+    }
+    .search{
+        margin-top: 2rem;
+        width: 80%;
+    }
+    .btn-group .custom-btn {
+        font-size: 1.1rem;
+        padding: 0.5rem 0.4rem;
+    }
+    header{
+        font-size: 3rem;
+    }
+    header h3{
+        font-size: 1.7rem;
+    }
+    .start_book p, .end_book p, .start_book select, .end_book select {
+        font-size: 1.4rem;
+    }
+}
+/* Optimizing the web for mobile */
+@media (max-width: 600px){
+    #search-icon{
+        display: none;
+    }
+    .booknsearch{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .start_book{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .search{
+        margin-top: 2rem;
+        width: 80%;
+    }
+    .btn-group .custom-btn {
+        font-size: 1.1rem;
+        padding: 0.5rem 0.4rem;
+    }
+    header{
+        font-size: 1.8rem;
+    }
+    header h3{
+        font-size: 1.3rem;
+    }
+    .start_book p, .end_book p{
+        font-size: 1.2rem;
+    }
+    
+    .start_book select, .end_book select {
+        font-size: 0.95rem;
+    }
+    .search input#get{
+        padding: 1rem 0 1.3rem 0.5rem;
+        font-size: 1.2rem;
+    }
+    .search input::placeholder{
+        font-size: 1.05rem;
+    }
+    
+}
